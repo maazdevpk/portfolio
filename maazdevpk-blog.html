@@ -1243,7 +1243,7 @@ header .nav{position:relative!important}
 .blog-hero{padding:72px 0 44px}.blog-hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:end}.blog-hero h1{font-size:clamp(44px,7vw,92px);line-height:.92;letter-spacing:-.06em;margin:8px 0 0}.blog-dot{color:#9DBB00}.blog-intro{font-size:17px;line-height:1.7;color:#596052;max-width:520px}.blog-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 30px}.blog-filter{border:1px solid rgba(14,24,10,.16);background:#fff;padding:10px 15px;border-radius:999px;font:inherit;cursor:pointer}.blog-filter.active{background:#0E180A;color:#fff}.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:70px}.blog-card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid rgba(14,24,10,.08);display:flex;flex-direction:column}.blog-image{aspect-ratio:16/10;background:#e9e8e2;overflow:hidden}.blog-image img{width:100%;height:100%;object-fit:cover}.blog-body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}.blog-meta{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#68705f}.blog-card h2{font-size:25px;line-height:1.08;letter-spacing:-.035em;margin:0}.blog-card p{color:#62685c;line-height:1.65;margin:0}.blog-link{margin-top:auto;color:#0E180A;font-weight:700;text-decoration:none}.blog-empty{grid-column:1/-1;background:#fff;border-radius:24px;padding:36px;text-align:center}.article-wrap{max-width:900px;margin:0 auto;padding:64px 24px 80px}.article-meta{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#68705f}.article-title{font-size:clamp(42px,7vw,78px);line-height:.96;letter-spacing:-.055em;margin:16px 0 24px}.article-excerpt{font-size:20px;line-height:1.6;color:#596052}.article-cover{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:28px;margin:30px 0}.article-content{font-size:18px;line-height:1.8}.article-content img{max-width:100%;border-radius:18px}.article-back{display:inline-block;margin-bottom:28px;color:#0E180A;font-weight:700;text-decoration:none}@media(max-width:900px){.blog-hero-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.blog-grid{grid-template-columns:1fr}.article-wrap{padding-left:18px;padding-right:18px}}
 </style></head><body><header><div class="container nav">
 <a class="brand" href="index.html">MAAZDEVPK</a>
-<nav class="nav-links" id="navLinks"><a aria-current="page" class="active" href="index.html">Home</a><a href="maazdevpk-work.html">Work</a><a href="maazdevpk-services.html">Services</a><a href="maazdevpk-skills.html">Skills</a><div class="nav-item-drop"><button class="nav-drop-btn" type="button">Profile</button><div class="nav-dropdown"><a href="maazdevpk-about.html">About</a><a href="maazdevpk-experience.html">Experience</a><a href="maazdevpk-education.html">Education</a><a href="maazdevpk-certifications.html">Certifications</a></div></div><a href="maazdevpk-blog.html">Blog</a><a href="maazdevpk-blog.html">Blog</a><a href="maazdevpk-faq.html">FAQ</a><a href="maazdevpk-contact.html">Contact</a></nav>
+<nav class="nav-links" id="navLinks"><a aria-current="page" href="index.html">Home</a><a href="maazdevpk-work.html">Work</a><a href="maazdevpk-services.html">Services</a><a href="maazdevpk-skills.html">Skills</a><div class="nav-item-drop"><button class="nav-drop-btn" type="button">Profile</button><div class="nav-dropdown"><a href="maazdevpk-about.html">About</a><a href="maazdevpk-experience.html">Experience</a><a href="maazdevpk-education.html">Education</a><a href="maazdevpk-certifications.html">Certifications</a></div></div><a href="maazdevpk-blog.html">Blog</a><a href="maazdevpk-faq.html">FAQ</a><a href="maazdevpk-contact.html">Contact</a></nav>
 <a class="btn" href="https://calendly.com/maazdevpk/wordpress-consultation" rel="noopener" target="_blank">Let's Talk ↗</a><button aria-controls="navLinks" aria-expanded="false" aria-label="Menu" class="icon-btn menu-toggle" id="menuToggle">☰</button>
 </div></header><main><section class="blog-hero"><div class="container blog-hero-grid"><div><div class="eyebrow">BLOG</div><h1>WordPress Notes<span class="blog-dot">.</span></h1></div><p class="blog-intro">Practical notes, guides and project insights around WordPress development, WooCommerce, website security, performance and SEO.</p></div></section><section><div class="container"><div class="blog-toolbar" id="blogFilters"></div><div class="blog-grid" id="blogGrid"></div></div></section></main><footer>
 <div class="container footer-grid">
@@ -1282,4 +1282,32 @@ header .nav{position:relative!important}
 <div style="margin-top:12px"><a class="btn" href="https://calendly.com/maazdevpk/wordpress-consultation" rel="noopener" target="_blank">Book a Call ↗</a></div>
 </div>
 </div>
-</footer><script src="cms-blog.js"></script></body></html>
+</footer><script src="cms-blog.js?v=13.4"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  const profilePages=['maazdevpk-about.html','maazdevpk-experience.html','maazdevpk-education.html','maazdevpk-certifications.html'];
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+  let target='index.html';
+  if(page==='maazdevpk-work.html') target='maazdevpk-work.html';
+  else if(page==='maazdevpk-services.html') target='maazdevpk-services.html';
+  else if(page==='maazdevpk-skills.html') target='maazdevpk-skills.html';
+  else if(page==='maazdevpk-blog.html'||page==='maazdevpk-blog-post.html') target='maazdevpk-blog.html';
+  else if(page==='maazdevpk-faq.html') target='maazdevpk-faq.html';
+  else if(page==='maazdevpk-contact.html') target='maazdevpk-contact.html';
+  if(profilePages.includes(page)){
+    const profile=document.querySelector('nav .profile-trigger, nav [data-profile-trigger], nav button');
+    if(profile) profile.classList.add('active');
+    else {
+      const links=[...document.querySelectorAll('nav a')];
+      const p=links.find(a=>a.textContent.trim().toLowerCase()==='profile');
+      if(p)p.classList.add('active');
+    }
+  } else {
+    const links=[...document.querySelectorAll('nav a')];
+    const a=links.find(x=>(x.getAttribute('href')||'').split('?')[0].split('#')[0].endsWith(target));
+    if(a)a.classList.add('active');
+  }
+});
+</script>
+</body></html>

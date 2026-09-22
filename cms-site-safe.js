@@ -20,8 +20,11 @@ function apply(db){
  if(page.includes('faq')) repeat('.faq-item',pub(db.faqs),(c,x,i)=>{t($('.faq-num',c),String(i+1).padStart(2,'0'));t($('.faq-title',c),x.question);t($('.faq-answer p',c),x.answer)});
  if(page.includes('contact')){const c=db.site&&db.site.contact||{};$$('a[href]').forEach(a=>{const h=a.getAttribute('href')||'';if(h.startsWith('mailto:')&&c.email)a.href='mailto:'+c.email;else if(h.startsWith('tel:')&&c.phone)a.href='tel:'+c.phone;else if(h.includes('wa.me/')&&c.whatsapp)a.href=c.whatsapp;else if(h.includes('calendly.com/')&&c.calendly)a.href=c.calendly;else if(h.includes('linkedin.com/')&&c.linkedin)a.href=c.linkedin;else if(h.includes('github.com/')&&c.github)a.href=c.github;else if(h.includes('instagram.com/')&&c.instagram)a.href=c.instagram;else if(h.includes('facebook.com/')&&c.facebook)a.href=c.facebook;else if(h.includes('threads.net/')&&c.threads)a.href=c.threads;else if(h.includes('x.com/')&&c.x)a.href=c.x;else if(h.includes('tiktok.com/')&&c.tiktok)a.href=c.tiktok})}
 }
-function tcat(sec){const h=$('h2',sec);return h?h.textContent.trim():''}
+function tcat(sec){
+ const h=$('h2',sec);
+ return h?h.textContent.replace(/\s*\.\s*$/,'').trim():'';
+}
 window.MAAZDEVPK_APPLY_CMS=apply;
 window.addEventListener('message',e=>{if(e.data&&e.data.type==='MAAZDEVPK_SITE_PREVIEW')apply(e.data.data)});
-try{const x=localStorage.getItem(KEY);if(x)apply(JSON.parse(x))}catch(e){}
+
 })();

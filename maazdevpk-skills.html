@@ -1242,7 +1242,7 @@ header .nav{position:relative!important}
 </style></head><body>
 <header><div class="container nav">
 <a class="brand" href="index.html">MAAZDEVPK</a>
-<nav class="nav-links" id="navLinks"><a aria-current="page" class="active" href="index.html">Home</a><a href="maazdevpk-work.html">Work</a><a href="maazdevpk-services.html">Services</a><a href="maazdevpk-skills.html">Skills</a><div class="nav-item-drop"><button class="nav-drop-btn" type="button">Profile</button><div class="nav-dropdown"><a href="maazdevpk-about.html">About</a><a href="maazdevpk-experience.html">Experience</a><a href="maazdevpk-education.html">Education</a><a href="maazdevpk-certifications.html">Certifications</a></div></div><a href="maazdevpk-blog.html">Blog</a><a href="maazdevpk-blog.html">Blog</a><a href="maazdevpk-faq.html">FAQ</a><a href="maazdevpk-contact.html">Contact</a></nav>
+<nav class="nav-links" id="navLinks"><a aria-current="page" href="index.html">Home</a><a href="maazdevpk-work.html">Work</a><a href="maazdevpk-services.html">Services</a><a href="maazdevpk-skills.html">Skills</a><div class="nav-item-drop"><button class="nav-drop-btn" type="button">Profile</button><div class="nav-dropdown"><a href="maazdevpk-about.html">About</a><a href="maazdevpk-experience.html">Experience</a><a href="maazdevpk-education.html">Education</a><a href="maazdevpk-certifications.html">Certifications</a></div></div><a href="maazdevpk-blog.html">Blog</a><a href="maazdevpk-faq.html">FAQ</a><a href="maazdevpk-contact.html">Contact</a></nav>
 <a class="btn" href="https://calendly.com/maazdevpk/wordpress-consultation" rel="noopener" target="_blank">Let's Talk ↗</a><button aria-controls="navLinks" aria-expanded="false" aria-label="Menu" class="icon-btn menu-toggle" id="menuToggle">☰</button>
 </div></header>
 <main>
@@ -1393,6 +1393,35 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 });
 </script>
-<script src="cms-site-safe.js" defer></script>
-<script src="cms-live-loader.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  const profilePages=['maazdevpk-about.html','maazdevpk-experience.html','maazdevpk-education.html','maazdevpk-certifications.html'];
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+  let target='index.html';
+  if(page==='maazdevpk-work.html') target='maazdevpk-work.html';
+  else if(page==='maazdevpk-services.html') target='maazdevpk-services.html';
+  else if(page==='maazdevpk-skills.html') target='maazdevpk-skills.html';
+  else if(page==='maazdevpk-blog.html'||page==='maazdevpk-blog-post.html') target='maazdevpk-blog.html';
+  else if(page==='maazdevpk-faq.html') target='maazdevpk-faq.html';
+  else if(page==='maazdevpk-contact.html') target='maazdevpk-contact.html';
+  if(profilePages.includes(page)){
+    const profile=document.querySelector('nav .profile-trigger, nav [data-profile-trigger], nav button');
+    if(profile) profile.classList.add('active');
+    else {
+      const links=[...document.querySelectorAll('nav a')];
+      const p=links.find(a=>a.textContent.trim().toLowerCase()==='profile');
+      if(p)p.classList.add('active');
+    }
+  } else {
+    const links=[...document.querySelectorAll('nav a')];
+    const a=links.find(x=>(x.getAttribute('href')||'').split('?')[0].split('#')[0].endsWith(target));
+    if(a)a.classList.add('active');
+  }
+});
+</script>
+
+<script src="cms-site-safe.js?v=13.4"></script>
+<script src="cms-live-loader.js?v=13.4"></script>
 </body></html>
