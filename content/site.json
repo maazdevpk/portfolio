@@ -146,7 +146,7 @@
     }
   ],
   "skills": {
-    "Web Development .": [
+    "Web Development": [
       {
         "title": "WordPress Development",
         "description": "Custom WordPress websites for business, service and project requirements.",
@@ -184,7 +184,7 @@
         "order": 6
       }
     ],
-    "WordPress Security & Performance .": [
+    "WordPress Security & Performance": [
       {
         "title": "Malware Cleanup",
         "description": "Removing malware, injected malicious code and backdoors from compromised WordPress websites.",
@@ -210,7 +210,7 @@
         "order": 4
       }
     ],
-    "Digital Marketing & SEO .": [
+    "Digital Marketing & SEO": [
       {
         "title": "On-Page SEO",
         "description": "Optimizing website pages, content and on-page elements for search.",
@@ -248,7 +248,7 @@
         "order": 6
       }
     ],
-    "Graphic Design & Visual Content .": [
+    "Graphic Design & Visual Content": [
       {
         "title": "Graphic Design",
         "description": "Visual design work supporting websites, brands and digital content.",
@@ -707,7 +707,7 @@
       "type": "Web Development",
       "title": "Web Development Backend",
       "issuer": "Bano Qabil",
-      "category": "WordPress & Web Development .",
+      "category": "WordPress & Web Development",
       "credentialUrl": "",
       "status": "published",
       "order": 1
@@ -717,7 +717,7 @@
       "type": "WordPress",
       "title": "WordPress Mastery Course",
       "issuer": "Hadi E-Learning",
-      "category": "WordPress & Web Development .",
+      "category": "WordPress & Web Development",
       "credentialUrl": "",
       "status": "published",
       "order": 2
@@ -727,7 +727,7 @@
       "type": "WordPress",
       "title": "WordPress",
       "issuer": "DigiSkills.pk",
-      "category": "WordPress & Web Development .",
+      "category": "WordPress & Web Development",
       "credentialUrl": "",
       "status": "published",
       "order": 3
@@ -737,7 +737,7 @@
       "type": "WordPress",
       "title": "WordPress – Web Development",
       "issuer": "PITB / e-Rozgaar",
-      "category": "WordPress & Web Development .",
+      "category": "WordPress & Web Development",
       "credentialUrl": "",
       "status": "published",
       "order": 4
@@ -747,7 +747,7 @@
       "type": "Digital Marketing",
       "title": "Digital Marketing",
       "issuer": "Bano Qabil",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 5
@@ -757,7 +757,7 @@
       "type": "Digital Marketing",
       "title": "Google Digital Marketing & E-commerce",
       "issuer": "Google",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 6
@@ -767,7 +767,7 @@
       "type": "Digital Marketing",
       "title": "Think Outside the Inbox: Email Marketing",
       "issuer": "Google",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 7
@@ -777,7 +777,7 @@
       "type": "Digital Marketing",
       "title": "From Likes to Leads",
       "issuer": "Google",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 8
@@ -787,7 +787,7 @@
       "type": "SEO",
       "title": "SEO with AI Mastery",
       "issuer": "Hadi E-Learning",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 9
@@ -797,7 +797,7 @@
       "type": "Digital Marketing",
       "title": "Digital Marketing",
       "issuer": "DigiSkills.pk",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 10
@@ -807,7 +807,7 @@
       "type": "SEO",
       "title": "SEO",
       "issuer": "DigiSkills.pk",
-      "category": "SEO & Digital Marketing .",
+      "category": "SEO & Digital Marketing",
       "credentialUrl": "",
       "status": "published",
       "order": 11
@@ -817,7 +817,7 @@
       "type": "Design",
       "title": "Graphic Design Essentials",
       "issuer": "Canva",
-      "category": "Design & UX .",
+      "category": "Design & UX",
       "credentialUrl": "",
       "status": "published",
       "order": 12
@@ -827,7 +827,7 @@
       "type": "Design / UX",
       "title": "Foundations of UX Design",
       "issuer": "Google",
-      "category": "Design & UX .",
+      "category": "Design & UX",
       "credentialUrl": "",
       "status": "published",
       "order": 13
@@ -837,7 +837,7 @@
       "type": "Design",
       "title": "Canva Crash Course",
       "issuer": "Hadi E-Learning",
-      "category": "Design & UX .",
+      "category": "Design & UX",
       "credentialUrl": "",
       "status": "published",
       "order": 14
@@ -847,7 +847,7 @@
       "type": "Design",
       "title": "Graphic Designing",
       "issuer": "Jawan Pakistan",
-      "category": "Design & UX .",
+      "category": "Design & UX",
       "credentialUrl": "",
       "status": "published",
       "order": 15
@@ -857,7 +857,7 @@
       "type": "Design",
       "title": "Graphic Design",
       "issuer": "DigiSkills.pk",
-      "category": "Design & UX .",
+      "category": "Design & UX",
       "credentialUrl": "",
       "status": "published",
       "order": 16
@@ -867,7 +867,7 @@
       "type": "AI",
       "title": "Google AI Professional Certificate",
       "issuer": "Google",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 17
@@ -877,7 +877,7 @@
       "type": "AI",
       "title": "Gemini Certified University Student",
       "issuer": "Google",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 18
@@ -887,7 +887,7 @@
       "type": "AI",
       "title": "Gemini Certified Educator",
       "issuer": "Google",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 19
@@ -897,7 +897,7 @@
       "type": "AI",
       "title": "Google AI Essentials Specialization",
       "issuer": "Google",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 20
@@ -907,7 +907,7 @@
       "type": "AI",
       "title": "AI for Managers by Microsoft and LinkedIn",
       "issuer": "Microsoft / LinkedIn",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 21
@@ -917,7 +917,7 @@
       "type": "Professional Skills",
       "title": "Google Soft Skills Program",
       "issuer": "PAFLA / Google",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 22
@@ -927,7 +927,7 @@
       "type": "AI",
       "title": "AI and Digital Transformation in Government",
       "issuer": "Saïd Business School, University of Oxford",
-      "category": "AI & Professional Learning .",
+      "category": "AI & Professional Learning",
       "credentialUrl": "",
       "status": "published",
       "order": 23
