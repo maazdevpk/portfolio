@@ -1439,7 +1439,8 @@ header .nav{position:relative!important}
 @media(max-width:620px){
   body{padding-top:63px!important}
 }
-</style></head>
+</style><!-- MAAZDEVPK V13.5 Web3Forms active -->
+</head>
 <body>
 <header id="siteHeader">
 <div class="container nav">
@@ -1604,7 +1605,12 @@ header .nav{position:relative!important}
 <div class="home-form-card reveal">
 <h3>Project Inquiry Form</h3>
 <p>Fill in the details below. Required fields are marked with *.</p>
-<form id="homeProjectForm">
+<form id="homeProjectForm" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="ec038f70-b791-4aff-bc4a-48ff14cfa130">
+<input type="hidden" name="subject" value="New MAAZDEVPK Project Inquiry">
+<input type="hidden" name="from_name" value="MAAZDEVPK Portfolio">
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+
 <div class="home-form-grid">
 <div class="home-field"><label for="hname">Name *</label><input id="hname" name="name" placeholder="Your name" required=""/></div>
 <div class="home-field"><label for="hemail">Email *</label><input id="hemail" name="email" placeholder="you@example.com" required="" type="email"/></div>
@@ -1619,7 +1625,7 @@ header .nav{position:relative!important}
 <button class="btn btn-accent" type="submit">Send Project Inquiry ↗</button>
 <a class="btn" href="https://wa.me/923225681705" rel="noopener" target="_blank">WhatsApp Me ↗</a>
 </div>
-<div class="home-form-note">This static portfolio form opens your email app with the entered project details. No information is submitted to a server from this page.</div>
+<div class="home-form-note" id="homeFormStatus" role="status" aria-live="polite">Your inquiry will be sent securely to MAAZDEVPK.</div>
 </form>
 </div>
 </div>
@@ -1768,7 +1774,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 </script><script>
 document.addEventListener('DOMContentLoaded',()=>{
- const form=document.getElementById('homeProjectForm');
+ const form=document.getElementById('homeProjectForm-legacy-disabled');
  if(!form)return;
  form.addEventListener('submit',function(e){
   e.preventDefault();
@@ -1868,5 +1874,50 @@ document.addEventListener('DOMContentLoaded',function(){
 </script>
 
 <script src="cms-live-loader.js?v=13.4"></script>
+
+<script>
+(function(){
+  const form = document.getElementById('homeProjectForm');
+  if (!form || form.dataset.web3formsReady === '1') return;
+  form.dataset.web3formsReady = '1';
+  const status = document.getElementById('homeFormStatus');
+  const button = form.querySelector('button[type="submit"]');
+  const defaultText = button ? button.textContent : 'Send Project Inquiry ↗';
+
+  form.addEventListener('submit', async function(event){
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Sending...';
+    }
+    if (status) status.textContent = 'Sending your project inquiry...';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        if (status) status.textContent = 'Thank you! Your project inquiry has been received.';
+        form.reset();
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
+    } catch (error) {
+      if (status) status.textContent = 'Unable to send right now. Please try again or contact me on WhatsApp.';
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = defaultText;
+      }
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
